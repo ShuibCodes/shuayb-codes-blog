@@ -1,5 +1,12 @@
 const path = require('path')
 
+
+// goals
+
+//1. generate a slug for each post 
+// 2. generate blog post page template
+//3. generate new page for each post
+
 module.exports.onCreateNode = ({ node, actions }) => {
     const { createNodeField } = actions
 
@@ -13,6 +20,13 @@ module.exports.onCreateNode = ({ node, actions }) => {
         })
     }
 }
+
+
+
+//1. get path to tempalte
+//2 get markdown data   
+//3. create new pages
+
 
 module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
@@ -30,6 +44,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
             }
         }
     `)
+    // for each post, this code will run 
 
     res.data.allMarkdownRemark.edges.forEach((edge) => {
         createPage({
