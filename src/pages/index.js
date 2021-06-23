@@ -1,12 +1,11 @@
 import * as React from "react"
-
+import '../App.css'
 import Navbar from '../components/Navbar'
 import {Container} from '../components/styledComponents/NavbarElements'
 import {Title} from '../components/styledComponents/NavbarElements'
 import {Bio} from '../components/styledComponents/NavbarElements'
-import Blog from './blog'
-import Blogpages from "../templates/blogpages"
-
+import Blog from '../pages/blog'
+import BlogPage from "../templates/blog"
 const IndexPage = () => {
   return (
     <Container>
@@ -25,8 +24,8 @@ const IndexPage = () => {
               My personal projects include this Blog and various up-comming projects including photography and my tech instagram
         </Bio>
 
-        <Blog />
-        <Blogpages/>
+    
+        <BlogPage/>
     </Container>
     
 
